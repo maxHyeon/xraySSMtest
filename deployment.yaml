@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xrayssmtest-deployment
+spec:
+  selector:
+    matchLabels:
+      app: xrayssmtest
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: xrayssmtest
+    spec:
+      containers:
+        - name: xrayssmtest
+          image: public.ecr.aws/o0n4p1o7/xrayssmtest:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: AWS_XRAY_DAEMON_ADDRESS
+              value: xray-service.amazon-cloudwatch.svc.cluster.local:2000

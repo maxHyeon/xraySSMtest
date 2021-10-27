@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "description": "echo Service",
+      "service_name": "*",
+      "http_method": "GET",
+      "url_path": "/api/v1/test/echo",
+      "fixed_target": 1,
+      "rate": 1
+    },
+    {
+      "description": "ssm key",
+      "service_name": "*",
+      "http_method": "GET",
+      "url_path": "/api/v1/test/ssm",
+      "fixed_target": 1,
+      "rate": 1
+    }
+  ],
+  "default": {
+    "fixed_target": 1,
+    "rate": 1
+  }
+}

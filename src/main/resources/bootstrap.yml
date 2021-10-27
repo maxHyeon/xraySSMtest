@@ -1,0 +1,28 @@
+aws:
+  paramstore:
+    enabled: true
+    prefix: /testssm
+    name: testkeys
+    profileSeparator: _
+logging:
+  level:
+    com:
+      amazonaws:
+        xray: DEBUG
+#
+##logLevel
+##logging.level.com.amazonaws.xray = DEBUG
+#logging.level.org.springframework.boot=DEBUG
+#logging.level.org.springframework.core=DEBUG
+
+##spring.config.import=aws-parameterstore:
+#aws.paramstore.endpoint=
+#aws.paramstore.enabled=true
+#aws.paramstore.prefix=/testssm
+#aws.paramstore.name=testkeys
+#aws.paramstore.defaultContext=application
+#aws.paramstore.failFast=false
+
+##static src path
+#spring.mvc.static-path-pattern=/static/**
+#spring.resources.static-locations=classpath:/static/
